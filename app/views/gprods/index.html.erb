@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gprods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gprods.each do |gprod| %>
+      <tr>
+        <td><%= gprod.nome %></td>
+        <td><%= link_to 'Show', gprod %></td>
+        <td><%= link_to 'Edit', edit_gprod_path(gprod) %></td>
+        <td><%= link_to 'Destroy', gprod, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gprod', new_gprod_path %>

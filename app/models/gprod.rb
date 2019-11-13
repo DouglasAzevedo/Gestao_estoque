@@ -1,0 +1,2 @@
+class Gprod < ApplicationRecord
+end
