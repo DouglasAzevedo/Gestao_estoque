@@ -12,12 +12,7 @@ RSpec.describe Movimento, type: :model do
       it { belong_to(:produto) }
     end
 
-    context 'deve validar a quantidade do movimento' do
+    context 'validar a quantidade do movimento' do
         it { should validate_numericality_of(:quantidade).is_greater_than(0) }
     end
-
-    context 'deve validar o tipo do movimento' do
-      
-    end
-
 end

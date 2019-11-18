@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2019_11_13_230653) do
 
   create_table "operacaos", force: :cascade do |t|
     t.string "descricao"
-    t.string "tipo"
+    t.integer "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
