@@ -7,11 +7,11 @@ FactoryBot.define do
         tipo { :2 }
     end
 
-    factory :devVenda, class: 'Movimento' do
+    factory :dvenda, class: 'Movimento' do
         tipo { :3 }
     end
 
-    factory :devcompra, class: 'Movimento' do
+    factory :dcompra, class: 'Movimento' do
         tipo { :4 }
     end
 
