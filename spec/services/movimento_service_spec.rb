@@ -26,7 +26,7 @@ RSpec.describe MovimentoService, type: :model do
 
         context 'uma venda com estoque menor ou igual ao cadastrado' do
             let(:vender) { FactoryBot.create(:operacao_venda) }
-            let(:venda) { MovimentoService.vender( FactoryBot.create(:movimento, operacao: vender) ).vender }
+            let(:venda) { MovimentoService.vender( FactoryBot.create(:movimento, operacao: vender) ) }
             
             it 'deve retornar uma instancia de Movimento' do
                 expect(venda).to be_an_instance_of(Movimento)
@@ -39,7 +39,7 @@ RSpec.describe MovimentoService, type: :model do
 
 
         context 'uma venda com quantidade maior do que o cadastrado' do
-            let(:operacao_venda) { FactoryBot.create(:operacao_venda) }
+            let(:vender) { FactoryBot.create(:operacao_venda) }
             let(:venda) { MovimentoService.vender( FactoryBot.create(:movimento, operacao: vender, quantidade: 100) ) }
             it 'deve validar' do
                 expect{ venda }.to raise_error(an_instance_of(StandardError).and having_attributes(message: 'Estoque maior do que o disponivel'))
