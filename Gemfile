@@ -41,6 +41,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'shoulda-matchers'
   gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails'
+  gem 'simplecov', require: false
 end
 
 group :development do
